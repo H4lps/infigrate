@@ -5,7 +5,11 @@ description = "Infigrate"
 readme = "README.md"
 requires-python = ">=3.13"
 license = "GPL-3.0-or-later"
-dependencies = []
+dependencies = [
+    "asyncpg>=0.31.0",
+    "fastapi>=0.136.1",
+    "redis>=7.4.0",
+]
 
 [dependency-groups]
 dev = []
