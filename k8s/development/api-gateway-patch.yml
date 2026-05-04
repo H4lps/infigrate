@@ -1,0 +1,14 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: infigrate-gateway
+spec:
+  gatewayClassName: infigrate-development-gateway-class
+  listeners:
+    - name: http
+      protocol: HTTP
+      port: 80
+      hostname: api.dev.infigrate.local
+      allowedRoutes:
+        namespaces:
+          from: Same

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: infigrate-dev
+  labels:
+    app.kubernetes.io/name: infigrate
+    app.kubernetes.io/part-of: infigrate
+    app.kubernetes.io/instance: development

@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: infigrate-prod
+resources:
+  - namespace.yml
+  - ../base
+images:
+  - name: infigrate-api
+    newTag: production
+patches:
+  - path: api-deployment-patch.yml
+  - path: api-gateway-patch.yml
+  - path: api-route-patch.yml
+  - path: postgres-secret-patch.yml
+  - path: postgres-storage-patch.yml
+  - path: queue-storage-patch.yml
